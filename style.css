@@ -1,0 +1,41 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: system-ui;
+}
+
+.card {
+    width: 30rem;
+    margin: 1rem auto;
+    border: 1px solid white;
+    border-radius: .2rem;
+
+    position: relative;
+}
+
+.card::after {
+    content: attr(data-count);
+    position: absolute;
+    bottom: 4px;
+    left: 10px;
+
+    opacity: .3;
+}
+
+.card blockquote {
+    font-size: large;
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+
+.card p {
+    padding-right: 2.1rem;
+    text-align: end;
+    color: green;
+}
+
+.card p::before {
+    content: "- ";
+}
